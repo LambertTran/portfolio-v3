@@ -1,0 +1,29 @@
+.loader-container{
+  height: 95vh;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.loader{
+  margin:auto;
+  height: 120px;
+  width: 120px;
+  border:16px solid #bdc3c7;
+  border-top-color: #0D5A05;
+  border-bottom-color: #9C3300;
+  border-radius: 50%;
+  animation-name: spin;
+  animation-duration: 2.5s;
+  animation-delay: 0ms;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(720deg);
+  }
+}
