@@ -7,6 +7,7 @@ import registerServiceWorker from './registerServiceWorker';
 import IntroPage from './containers/IntroPage';
 import TechPage from './containers/TechPage';
 import ProjectPage from './containers/ProjectPage';
+import DiagonalBg from './components/DiagonalBg';
 
 /** Styles */
 import './styles/css/Loader.css';
@@ -15,13 +16,15 @@ import './styles/css/Loader.css';
 class Wrapper extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { loading: true };
+    this.state = { 
+      loading: true,
+    };
   }
 
   componentDidMount() {
     setTimeout(() => {
       this.setState({ loading: false })
-    }, 1000);
+    }, 800);
   }
 
   render() {
@@ -38,6 +41,7 @@ class Wrapper extends React.Component {
         <IntroPage />
         <TechPage />
         <ProjectPage />
+        <DiagonalBg />
       </div>
     )
   }

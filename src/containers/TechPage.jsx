@@ -11,7 +11,9 @@ import '../styles/css/TechPage.css';
 export default function TechPage() {
   return (
     <div className="tech-page">
-      This is IntroPage
+      <h1>
+        This is IntroPage
+      </h1>
     </div>
   )
 }

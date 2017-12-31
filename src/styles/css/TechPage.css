@@ -1,4 +1,6 @@
 .tech-page {
   height: 50vh;
   width: 100vw;
-  background: linear-gradient(to bottom, #1B325F, #E9F2F9); }
+  z-index: 10; }
+  .tech-page h1 {
+    z-index: 10; }
