@@ -1,9 +1,19 @@
 .tech-page{
   height: 50vh;
   width: 100vw;
-  z-index: 10;
-  h1{
-    z-index: 10;
-
+  position: relative;  
+  .tech-content{
+    padding:23px;
+  }
+  
+  .tech-list{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    i{
+      font-size: 50px;
+      margin: 10px;
+    }
   }
 }

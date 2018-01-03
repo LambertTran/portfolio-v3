@@ -1,16 +1,36 @@
-$top-bg: #FFFFFF;
+@import 'Font-Color.scss';
+
 .intro-page{
   position: relative;
-  // background-color: $top-bg; 
+  // background: linear-gradient(to right bottom, $bg1, $bg2); 
   height: 100vh;
   width: 100%;
-  overflow-x: hidden;
-  z-index: -20;
+  font-family: $text-font;
+
 }
 .content{
-  z-index: 10;
+  color: $main-header;
+  text-align: center;
+  padding: 23px;
   h1{
-    margin:0;
-    color: #1B325F;
+    margin-top:90px;
   } 
 }
+
+.fadeIn-appear {
+  opacity: 0.01;
+}
+
+.fadeIn-appear.fadeIn-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+// .fade-leave {
+//   opacity: 1;
+// }
+
+// .fade-leave.fade-leave-active {
+//   opacity: 0.01;
+//   transition: opacity 300ms ease-in;
+// }

@@ -7,28 +7,46 @@ import registerServiceWorker from './registerServiceWorker';
 import IntroPage from './containers/IntroPage';
 import TechPage from './containers/TechPage';
 import ProjectPage from './containers/ProjectPage';
+import Navbar from './containers/Navbar';
 import DiagonalBg from './components/DiagonalBg';
 
 /** Styles */
 import './styles/css/Loader.css';
+import './styles/css/Body.css';
 
 /** Class */
 class Wrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      loading: true,
+      loading: false,
+      bgColor: 'linear-gradient(to right bottom, #FC5130, #30BCED)',
     };
+    this.handleBgColorChange = this.handleBgColorChange.bind(this);
   }
 
+  // Add loader before page rendering
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({ loading: false })
-    }, 800);
+    this.setState({ loading: false });
+  }
+
+  // Handle change background color
+  handleBgColorChange(changeBg) {
+    if (changeBg) {
+      console.log("here")
+      this.setState({
+        bgColor: 'linear-gradient(to right bottom, #FC5130, #FFFAFF)',
+      });
+    } else {
+      this.setState({
+        bgColor: 'linear-gradient(to right bottom, #FC5130, #30BCED)',
+      });
+    }
   }
 
   render() {
-    const { loading } = this.state;
+    const { loading, bgColor } = this.state;
+    // render loader before page completes loading data
     if (loading) {
       return (
         <div className="loader-container">
@@ -36,12 +54,14 @@ class Wrapper extends React.Component {
         </div>
       );
     }
-    return(
-      <div>
-        <IntroPage />
-        <TechPage />
-        <ProjectPage />
-        <DiagonalBg />
+    return (
+      <div style={{ background: bgColor }} >
+        <div className="wrapper">
+          <Navbar />
+          <IntroPage handleBgColorChange={this.handleBgColorChange} />
+          <TechPage />
+          <ProjectPage />
+        </div>
       </div>
     )
   }

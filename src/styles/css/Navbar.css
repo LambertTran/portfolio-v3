@@ -1,0 +1,25 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  display: flex;
+  justify-content: space-around; }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0 10px 0; }
+    .navbar ul li {
+      margin-right: 15px; }
+      .navbar ul li a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        color: white;
+        text-decoration: none; }
+
+.boxShadow {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); }
