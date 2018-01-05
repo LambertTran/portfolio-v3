@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: 100%;
   margin-top: 20px;
   margin-bottom: 20px; }
   .avatar img {
@@ -17,6 +16,12 @@
     height: 100%;
     margin-left: 5px;
     padding: 5px; }
+    @media screen and (min-width: 767px) {
+      .avatar p {
+        font-size: 1.6em; } }
+  @media screen and (min-width: 666px) {
+    .avatar {
+      padding: 25px; } }
 
 .slideUp-appear {
   opacity: 0.01;

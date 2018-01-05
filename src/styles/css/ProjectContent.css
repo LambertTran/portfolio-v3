@@ -1,0 +1,11 @@
+.project-content {
+  height: 100%; }
+  .project-content img {
+    height: 250px;
+    width: 100%; }
+
+.project-detail {
+  overflow-y: scroll;
+  padding: 25px; }
+  .project-detail h1 {
+    text-align: center; }

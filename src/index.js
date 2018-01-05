@@ -51,6 +51,10 @@ class Wrapper extends React.Component {
 
   render() {
     const { loading, bgColor } = this.state;
+    const BgStyle = {
+      background: bgColor,
+      transition: 'background-color 2s ease',
+    }
     // render loader before page completes loading data
     if (loading) {
       return (
@@ -60,7 +64,7 @@ class Wrapper extends React.Component {
       );
     }
     return (
-      <div style={{ background: bgColor }} >
+      <div className="portfolio" style={BgStyle} >
         <div className="wrapper">
           <Navbar />
           <IntroPage handleBgColorChange={this.handleBgColorChange} />

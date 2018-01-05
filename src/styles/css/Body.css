@@ -1,6 +1,13 @@
-.wrapper {
-  max-width: 1300px;
+.portfolio {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: background 20s ease; }
+
+.wrapper {
+  align-self: center;
+  max-width: 1015px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center; }
