@@ -1,5 +1,6 @@
 /** Packages */
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 /** Images */
 import avatar from '../images/avatar.png';
@@ -7,23 +8,78 @@ import avatar from '../images/avatar.png';
 /** Styles */
 import '../styles/css/Avatar.css';
 
-export default function AvatarTalk(props) {
-  let imgDimens;
-  let fontSize;
-  if (props.dimen) {
-    imgDimens = {
-      height:props.dimen,
-      width:props.dimen,
-    };
+/** Helpers */
+import isElementInView from '../helpers/isElementInView';
+
+export default class AvatarTalk extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { opacity : 0 };
+    this.handleInView = this.handleInView.bind(this);
   }
-  if (props.fontSize) {
-    fontSize = fontSize;
+
+  componentDidMount() {
+    if (this.props.static) {
+      this.handleInView();
+    } else {
+      window.addEventListener('scroll', () => {
+        const rect = this.avatarElement.getBoundingClientRect();
+        window.addEventListener('scroll', () => {
+          if (rect.bottom<= (window.innerHeight || document.documentElement.clientHeight)) {
+            this.handleInView();
+          }
+        });
+      })
+    }
   }
-  return (
-    <div className="avatar" >
-      <img src={avatar} style={imgDimens} alt="avatar" />
-      
-      <p style={fontSize}>{props.talk}</p>
-    </div>
-  )  
+
+  handleInView() {
+    this.setState({ opacity: 1 });
+  }
+
+  checkDefaultValues() {
+    let imgDimens;
+    let fontSize;
+    if (this.props.dimen) {
+      imgDimens = {
+        height:this.props.dimen,
+        width:this.props.dimen,
+      };
+    }
+    if (this.props.fontSize) {
+      fontSize = fontSize;
+    }
+    return {fontSize , imgDimens};  
+  }
+
+  render() {
+    const {fontSize , imgDimens} = this.checkDefaultValues();
+    if (this.state.opacity < 1) {
+      return (
+        <div className="avatar"
+        style= {{opacity: 0}}
+          ref={(avatarElement) => this.avatarElement = avatarElement}
+        >
+          <img src={avatar} style={imgDimens} alt="avatar" />
+          <p style={fontSize}>{this.props.talk}</p>
+        </div>
+      )
+    }
+    return (
+      <ReactCSSTransitionGroup
+            transitionName="slideUp"
+            transitionAppear={ true }
+            transitionAppearTimeout={1000}
+            transitionEnter={ false }
+            transitionLeave={ false }
+      >  
+        <div className="avatar"
+          ref={(avatarElement) => this.avatarElement = avatarElement}
+        >
+          <img src={avatar} style={imgDimens} alt="avatar" />
+          <p style={fontSize}>{this.props.talk}</p>
+        </div>
+      </ReactCSSTransitionGroup>
+    );  
+  }
 }

@@ -5,6 +5,12 @@
   top:0;
   display: flex;
   justify-content: space-around;
+  padding: 0 5px 0 5px;
+  img{
+    height: 45px;
+    width: 45px;
+    align-self: center;
+  }
   ul{
     list-style: none;
     display: flex;

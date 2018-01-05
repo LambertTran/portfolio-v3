@@ -4,6 +4,9 @@ import React from 'react';
 /** Styles */
 import '../styles/css/Navbar.css';
 
+/** Logo */
+import logo from '../images/logo.png';
+
 /** Class */
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -39,7 +42,7 @@ export default class Navbar extends React.Component {
     } 
     return (
       <nav className={`navbar ${border}`} style={{ backgroundColor: bgColor }} >
-        <p>Brand</p>
+        <img src={logo} alt="logo"/>
         <ul>
           <li><a href="/tech-page">
             <i className="fa fa-wrench" aria-hidden="true"></i>

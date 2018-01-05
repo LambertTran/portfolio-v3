@@ -4,6 +4,8 @@
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
+  margin-top:20px;
+  margin-bottom: 20px;
   img{
     width: 65px;
     height:65px;
@@ -12,8 +14,20 @@
   p{
     font-size:1.2em;
     background-color:hsla(0,0%,100%,.2);
-    max-width: 80%;
+    max-width: 70%;
     height: 100%;
     margin-left: 5px;
+    padding: 5px;
   }
+}
+
+.slideUp-appear {
+  opacity: 0.01;
+  bottom: -100px;
+}
+
+.slideUp-appear.slideUp-appear-active {
+  opacity: 1;
+  bottom:0px;
+  transition: 1s ease-in;
 }

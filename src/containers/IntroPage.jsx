@@ -11,17 +11,17 @@ import '../styles/css/IntroPage.css';
 export default class IntroPage extends React.Component {
 
   componentDidMount() {
-    this.getHeight();
+    this.changeBgColor();
   }
 
-  getHeight() {
+  changeBgColor() {
     const div = document.querySelector('.intro-page');
     const rect = div.getBoundingClientRect();
     window.addEventListener('scroll', () => {
       if (window.pageYOffset >= rect.bottom / 2) {
-        this.props.handleBgColorChange(true);
+        this.props.handleBgColorChange('techBg');
       } else {
-        this.props.handleBgColorChange(false);
+        this.props.handleBgColorChange('introBg');
       }
     });
   }
@@ -29,21 +29,14 @@ export default class IntroPage extends React.Component {
   render() {
     const intro = 'My name is Lambert Tran.' + "\n" +
                   'I\'m an inspired full-stack developer';
+    const talk = 'Let me show you my story';
     return (
       <div className="intro-page">
         <div className="content">
-          <ReactCSSTransitionGroup
-            transitionName="fadeIn"
-            transitionAppear={true}
-            transitionAppearTimeout={1000}
-            transitionEnter={false}
-            transitionLeave={false}
-          >      
-            <h1 key="intro-header1">Wellcome!</h1>
-            <h2 key="intro-header2">Good to see you here</h2>
-            <AvatarTalk key="intro-avatar" talk={intro} dimen="100px" fontSize="25px" />
-            <h2 key="intro-header3">Let me show you my story</h2>
-          </ReactCSSTransitionGroup>
+          <h1 key="intro-header1">Wellcome!</h1>
+          <h2 key="intro-header2">Good to see you here</h2>
+          <AvatarTalk key="intro-avatar-1" static={true} talk={intro} dimen="80px" fontSize="25px" />
+          <AvatarTalk key="intro-avatar-2" static={true} talk={talk} fontSize="25px" />
         </div>
       </div>
     );

@@ -4,7 +4,12 @@
   z-index: 100;
   top: 0;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  padding: 0 5px 0 5px; }
+  .navbar img {
+    height: 45px;
+    width: 45px;
+    align-self: center; }
   .navbar ul {
     list-style: none;
     display: flex;

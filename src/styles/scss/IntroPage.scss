@@ -3,7 +3,7 @@
 .intro-page{
   position: relative;
   // background: linear-gradient(to right bottom, $bg1, $bg2); 
-  height: 100vh;
+  min-height: 70vh;
   width: 100%;
   font-family: $text-font;
 
@@ -12,25 +12,9 @@
   color: $main-header;
   text-align: center;
   padding: 23px;
+  min-height: 100%;
   h1{
-    margin-top:90px;
+    margin-top:100px;
   } 
 }
 
-.fadeIn-appear {
-  opacity: 0.01;
-}
-
-.fadeIn-appear.fadeIn-appear-active {
-  opacity: 1;
-  transition: opacity 1s ease-in;
-}
-
-// .fade-leave {
-//   opacity: 1;
-// }
-
-// .fade-leave.fade-leave-active {
-//   opacity: 0.01;
-//   transition: opacity 300ms ease-in;
-// }

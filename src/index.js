@@ -19,7 +19,7 @@ class Wrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      loading: false,
+      loading: true,
       bgColor: 'linear-gradient(to right bottom, #FC5130, #30BCED)',
     };
     this.handleBgColorChange = this.handleBgColorChange.bind(this);
@@ -27,21 +27,26 @@ class Wrapper extends React.Component {
 
   // Add loader before page rendering
   componentDidMount() {
-    this.setState({ loading: false });
+    setTimeout(() => {
+      this.setState({ loading: false });
+    },500);
   }
 
   // Handle change background color
   handleBgColorChange(changeBg) {
-    if (changeBg) {
-      console.log("here")
+    if (changeBg === 'techBg') {
       this.setState({
         bgColor: 'linear-gradient(to right bottom, #FC5130, #FFFAFF)',
+      });
+    } else if (changeBg === 'projectBg') {
+      this.setState({
+        bgColor: 'white',
       });
     } else {
       this.setState({
         bgColor: 'linear-gradient(to right bottom, #FC5130, #30BCED)',
       });
-    }
+    }  
   }
 
   render() {
@@ -59,7 +64,7 @@ class Wrapper extends React.Component {
         <div className="wrapper">
           <Navbar />
           <IntroPage handleBgColorChange={this.handleBgColorChange} />
-          <TechPage />
+          <TechPage handleBgColorChange={this.handleBgColorChange} />
           <ProjectPage />
         </div>
       </div>
