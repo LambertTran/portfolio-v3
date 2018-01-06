@@ -37,6 +37,7 @@ class Wrapper extends React.Component {
     if (changeBg === 'techBg') {
       this.setState({
         bgColor: 'linear-gradient(to right bottom, #FC5130, #FFFAFF)',
+        // bgColor: "red",
       });
     } else if (changeBg === 'projectBg') {
       this.setState({
@@ -45,16 +46,21 @@ class Wrapper extends React.Component {
     } else {
       this.setState({
         bgColor: 'linear-gradient(to right bottom, #FC5130, #30BCED)',
+        // bgColor:"blue",
       });
     }  
   }
 
   render() {
     const { loading, bgColor } = this.state;
-    const BgStyle = {
-      background: bgColor,
-      transition: 'background-color 2s ease',
+    let BgStyle;
+    if (bgColor === 'white') {
+      BgStyle = { backgroundColor: 'white'}
+    } else {
+      BgStyle = { background : bgColor}
     }
+    
+
     // render loader before page completes loading data
     if (loading) {
       return (
