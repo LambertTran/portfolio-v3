@@ -6,12 +6,9 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 /** Component */
 import ProjectContent from './ProjectContent';
 
-/** Images */
-import avatar from '../images/avatar.png';
-
 /** Styles */
+import 'animate.css';
 import '../styles/css/Project.css';
-
 /**
  * Each project has 2 main components
  *    + Background image
@@ -25,20 +22,21 @@ const modalStyle = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : 'rgba(255, 255, 255, 0.75)'
+    backgroundColor   : 'rgba(255, 255, 255, 0.75)',
+    zIndex            : '20',
   },
   content: {
+    position              : 'absolute',
     width                 : '90%',
-    top                   : '55%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)',
-    border                : '1px solid #ccc',
+    top                   : '0',
+    bottom                : '0',
+    right                 : '0',
+    left                  :'0',
+    margin                :'auto',
+    border                : '1px solid #303036',
     borderRadius          : '20px',
-    height             : '500px',
-    overflow              : 'scroll',
+    height                : '90%',
+    overflow              : 'auto',
     padding               : '0',
   },
 };
@@ -55,7 +53,7 @@ export default class Project extends React.Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
   }
 
-  componentWillMount(){
+  componentWillMount() {
     Modal.setAppElement('body');
   }
 
@@ -75,12 +73,15 @@ export default class Project extends React.Component {
           className="project-bg" 
           onClick={this.handleOpenModal}
           style={{backgroundImage: `url(${data.image})`}}
-        >
+          >
           <h1 className="project-name">{data.name}</h1>
         </div>
         <Modal
+          className="animated fadeInDown"
+          onRequestClose={this.handleCloseModal}
           isOpen={this.state.isModalOpen}
           style={modalStyle}
+          shouldFocusAfterRender={false}
           contentLabel="project modal"
         >
           <button className="close-btn" type="button" onClick={this.handleCloseModal}>&#10006;</button>

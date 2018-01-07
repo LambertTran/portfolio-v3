@@ -2,5 +2,13 @@
   min-height: 100vh;
   width: 100%; }
 
-.project-list {
+.project-container {
   padding: 23px; }
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  @media screen and (min-width: 767px) {
+    .project-list {
+      flex-direction: row; } }

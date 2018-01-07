@@ -17,10 +17,12 @@ export default function ProjectPage() {
   const talk2 = 'Feel free to browse my works';
   return (
     <div className="project-page">
-      <div className="project-list">
+      <div className="project-container">
         <AvatarTalk key="project-talk-1" talk={talk1} />
         <AvatarTalk key="project-talk-2" talk={talk2} />
-        <Project data={projectData.auto27} />
+        <div className="project-list">
+          <Project data={projectData.auto27} />
+        </div>
       </div>
     </div>
   )

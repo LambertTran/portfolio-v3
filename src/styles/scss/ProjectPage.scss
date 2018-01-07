@@ -3,6 +3,16 @@
   width: 100%;
 }
 
-.project-list{
+.project-container{
   padding: 23px;
+}
+
+.project-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  @media screen and (min-width:767px){
+    flex-direction: row;
+  }
 }

@@ -14,7 +14,7 @@ export default function ProjectContent(projectData) {
   // render button for source code
   function renderSourceCode(link){
     return (
-      <a href={link} target="_blank" >Source code</a>
+      <a className="linkBtn" href={link} target="_blank" >Source code</a>
     )
   }
 
@@ -36,9 +36,7 @@ export default function ProjectContent(projectData) {
         </ul>
       <div>
         {renderSourceCode(data.github)}
-      </div>
-      <div>
-        {renderSourceCode(data.web)} */}
+        {renderSourceCode(data.web)}
       </div>
 
       </div>

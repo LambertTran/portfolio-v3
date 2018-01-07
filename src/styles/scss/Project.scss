@@ -1,8 +1,15 @@
 .project-item{
   height: 290px;
   width: 100%;
+  // border: 1px solid #303036;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
   border-radius: 20px;
+  padding: 0;
+
+  @media screen and (min-width:767px){
+    flex-basis: 350px;
+    flex-wrap: wrap;
+  }
 }
 
 .project-bg{
@@ -13,17 +20,20 @@
   border-radius: 20px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   h1{
     border-radius: 0 0 20px 20px;
     text-align: center;
-    background-color: white;
+    background-color: #FFFAFF;
+    color: #050401;
     margin: 0;
     border: none;
+    transition: opacity 0.3s ease-in;
   }
   &:hover{
     h1{
       opacity: 0;
-      transition: opacity 1s ease-out;
+      transition: opacity 0.3s ease-out;
     }
   }
 }
@@ -35,9 +45,30 @@
   top: 0;
   padding: 10px 15px 0 0;
   color:white;
+  transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  border: none;
+  background-color: transparent;
+  &:hover{
+    font-size: 40px;
+  }
+  @media screen and (min-width:1023px){
+    color: black;
+  }
 }
 
 // stop body from scrolling when modal is open
 .ReactModal__Body--open {
   overflow-y: hidden;
+}
+
+.ReactModal__Content, .ReactModal__Content--after-open {
+  @media screen and (min-width: 767px){
+    width:600px !important;
+    height:800px;
+  }
+  @media screen and (min-width: 1023px){
+    width:800px !important;
+    height:500px;
+  }
+
 }
