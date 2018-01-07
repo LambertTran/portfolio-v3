@@ -3,7 +3,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  // border: 2px solid #303036;
   background-color: #FFFAFF;
   img{
     min-height: 250px;
@@ -11,10 +10,13 @@
   }
   @media screen and (min-width:1023px){
     flex-direction: row;
+    img{
+    }
   }
 }
 
 .project-detail{
+  flex-basis: 300px;
   // overflow-y: scroll;
   padding: 25px 25px 60px 25px;
   h1{

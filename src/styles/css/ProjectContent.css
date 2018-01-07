@@ -12,6 +12,7 @@
       flex-direction: row; } }
 
 .project-detail {
+  flex-basis: 300px;
   padding: 25px 25px 60px 25px; }
   .project-detail h1 {
     text-align: center; }

@@ -62,13 +62,15 @@
 }
 
 .ReactModal__Content, .ReactModal__Content--after-open {
+  &:focus{
+    outline:none !important;
+  }
   @media screen and (min-width: 767px){
     width:600px !important;
-    height:800px;
+    height:800px !important;
   }
   @media screen and (min-width: 1023px){
-    width:800px !important;
-    height:500px;
+    width:900px !important;
+    height:600px !important;
   }
-
 }

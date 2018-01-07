@@ -49,12 +49,15 @@
 .ReactModal__Body--open {
   overflow-y: hidden; }
 
+.ReactModal__Content:focus, .ReactModal__Content--after-open:focus {
+  outline: none !important; }
+
 @media screen and (min-width: 767px) {
   .ReactModal__Content, .ReactModal__Content--after-open {
     width: 600px !important;
-    height: 800px; } }
+    height: 800px !important; } }
 
 @media screen and (min-width: 1023px) {
   .ReactModal__Content, .ReactModal__Content--after-open {
-    width: 800px !important;
-    height: 500px; } }
+    width: 900px !important;
+    height: 600px !important; } }
