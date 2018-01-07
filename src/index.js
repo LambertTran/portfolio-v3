@@ -29,7 +29,7 @@ class Wrapper extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ loading: false });
-    },500);
+    }, 1000);
   }
 
   // Handle change background color
@@ -65,7 +65,9 @@ class Wrapper extends React.Component {
     if (loading) {
       return (
         <div className="loader-container">
-          <div className="loader" />
+          <div className="loader">
+            <span className="loader-inner" />
+          </div>
         </div>
       );
     }

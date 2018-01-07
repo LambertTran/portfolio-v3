@@ -10,7 +10,8 @@
   flex-direction: column;
   justify-content: flex-end;
   border-radius: 20px;
-  background-color: transparent; }
+  background-repeat: no-repeat;
+  background-position: center; }
   .project-bg h1 {
     border-radius: 0 0 20px 20px;
     text-align: center;
