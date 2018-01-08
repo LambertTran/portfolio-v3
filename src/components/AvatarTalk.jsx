@@ -72,13 +72,15 @@ export default class AvatarTalk extends React.Component {
             transitionAppearTimeout={1000}
             transitionEnter={ false }
             transitionLeave={ false }
-      >  
-        <div className="avatar"
-          ref={(avatarElement) => this.avatarElement = avatarElement}
-        >
-          <img src={avatar} style={imgDimens} alt="avatar" />
-          <p style={fontSize}>{this.props.talk}</p>
-        </div>
+      >
+        <div className="avatar-container">
+          <div className="avatar"
+            ref={(avatarElement) => this.avatarElement = avatarElement}
+          >
+            <img src={avatar} style={imgDimens} alt="avatar" />
+            <p style={fontSize}>{this.props.talk}</p>
+          </div>
+        </div>  
       </ReactCSSTransitionGroup>
     );  
   }

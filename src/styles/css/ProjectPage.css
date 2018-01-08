@@ -8,7 +8,12 @@
 .project-list {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: space-around;
+  align-items: center; }
   @media screen and (min-width: 767px) {
     .project-list {
-      flex-direction: row; } }
+      flex-direction: row;
+      flex-wrap: wrap; } }
+  @media screen and (min-width: 1366px) {
+    .project-list {
+      padding: 0 15px 0 15px; } }

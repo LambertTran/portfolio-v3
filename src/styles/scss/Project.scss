@@ -5,10 +5,18 @@
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   padding: 0;
-
+  margin-bottom: 20px;
   @media screen and (min-width:767px){
-    flex-basis: 350px;
-    flex-wrap: wrap;
+    flex-basis: 320px;
+    margin:10px 5px 10px 5px;
+  }
+  @media screen and (min-width:1023px){
+    flex-basis: 300px;
+    margin:10px 5px 20px 5px;
+  }
+  @media screen and (min-width:1366px){
+    flex-basis: 360px;
+    margin:10px 5px 20px 5px;
   }
 }
 
@@ -22,6 +30,8 @@
   background-position: center;
   background-size: cover;
   h1{
+    height:70px;
+    line-height: 70px;
     border-radius: 0 0 20px 20px;
     text-align: center;
     background-color: #FFFAFF;
@@ -70,7 +80,7 @@
     height:800px !important;
   }
   @media screen and (min-width: 1023px){
-    width:900px !important;
-    height:600px !important;
+    width:1000px !important;
+    height:700px !important;
   }
 }

@@ -5,8 +5,8 @@ import React from 'react';
 import AvatarTalk from '../components/AvatarTalk';
 import Project from '../components/Project';
 
-/** data */
-import projectData from '../data/project-data';
+/** store */
+import projectData from '../store/project-data';
 
 /** Styles */
 import '../styles/css/ProjectPage.css';
@@ -22,6 +22,8 @@ export default function ProjectPage() {
         <AvatarTalk key="project-talk-2" talk={talk2} />
         <div className="project-list">
           <Project data={projectData.auto27} />
+          <Project data={projectData.todoApp} />
+          <Project data={projectData.markdown} />
         </div>
       </div>
     </div>

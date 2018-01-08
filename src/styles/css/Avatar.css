@@ -1,6 +1,12 @@
+.avatar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
 .avatar {
   position: relative;
   display: flex;
+  width: 100%;
   flex-direction: row;
   justify-content: flex-start;
   margin-top: 20px;
@@ -12,8 +18,9 @@
   .avatar p {
     font-size: 1.2em;
     background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 3px 5px black;
     max-width: 70%;
-    height: 100%;
     margin-left: 5px;
     padding: 5px; }
     @media screen and (min-width: 767px) {
@@ -21,7 +28,10 @@
         font-size: 1.6em; } }
   @media screen and (min-width: 666px) {
     .avatar {
-      padding: 25px; } }
+      width: 500px; } }
+  @media screen and (min-width: 1023px) {
+    .avatar {
+      width: 800px; } }
 
 .slideUp-appear {
   opacity: 0.01;

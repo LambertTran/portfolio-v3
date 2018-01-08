@@ -9,10 +9,12 @@
     width: 100%; }
   @media screen and (min-width: 1023px) {
     .project-content {
-      flex-direction: row; } }
+      flex-direction: row; }
+      .project-content img {
+        width: 700px; } }
 
 .project-detail {
-  flex-basis: 300px;
+  flex-basis: 400px;
   padding: 25px 25px 60px 25px; }
   .project-detail h1 {
     text-align: center; }
@@ -24,7 +26,6 @@
   line-height: 20px;
   text-align: center;
   padding: 5px;
-  width: 120px;
   border-radius: 40px;
   background-color: transparent;
   border: 1px solid #30BCED;
