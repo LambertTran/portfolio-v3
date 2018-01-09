@@ -18,6 +18,8 @@
   padding: 25px 25px 60px 25px; }
   .project-detail h1 {
     text-align: center; }
+  .project-detail p {
+    font-size: 1.2em; }
 
 .linkBtn {
   outline: none;
