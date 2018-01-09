@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 
 /** Components */
+import Navbar from './containers/Navbar';
 import IntroPage from './containers/IntroPage';
 import TechPage from './containers/TechPage';
 import ProjectPage from './containers/ProjectPage';
-import Navbar from './containers/Navbar';
-import DiagonalBg from './components/DiagonalBg';
+import ContactPage from './containers/ContactPage';
 
 /** Styles */
 import './styles/css/Loader.css';
@@ -77,7 +77,8 @@ class Wrapper extends React.Component {
           <Navbar />
           <IntroPage handleBgColorChange={this.handleBgColorChange} />
           <TechPage handleBgColorChange={this.handleBgColorChange} />
-          <ProjectPage />
+          <ProjectPage handleBgColorChange={this.handleBgColorChange}  />
+          <ContactPage />
         </div>
       </div>
     )

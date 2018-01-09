@@ -12,20 +12,37 @@ import projectData from '../store/project-data';
 import '../styles/css/ProjectPage.css';
 
 /** Class */
-export default function ProjectPage() {
-  const talk1 = 'Finally! We are here. My proud projects!';
-  const talk2 = 'Feel free to browse my works';
-  return (
-    <div className="project-page">
-      <div className="project-container">
-        <AvatarTalk key="project-talk-1" talk={talk1} />
-        <AvatarTalk key="project-talk-2" talk={talk2} />
-        <div className="project-list">
-          <Project data={projectData.auto27} />
-          <Project data={projectData.todoApp} />
-          <Project data={projectData.markdown} />
+export default class ProjectPage extends React.Component {
+
+  componentDidMount() {
+    this.changeBgColor();
+  }  
+
+  changeBgColor() {
+    const div = document.querySelector('.project-page');
+    const rect = div.getBoundingClientRect();
+    window.addEventListener('scroll', () => {
+      const screen = window.innerHeight  + window.pageYOffset;
+      if (screen >= rect.bottom * 1.2) {
+        this.props.handleBgColorChange('introBg');
+      };
+    });
+  }
+  render() {
+    const talk1 = 'Finally! We are here. My proud projects!';
+    const talk2 = 'Feel free to browse my works';
+    return (
+      <div className="project-page">
+        <div className="project-container">
+          <AvatarTalk key="project-talk-1" talk={talk1} />
+          <AvatarTalk key="project-talk-2" talk={talk2} />
+          <div className="project-list">
+            <Project data={projectData.auto27} />
+            <Project data={projectData.todoApp} />
+            <Project data={projectData.markdown} />
+          </div>
         </div>
       </div>
-    </div>
-  )
+    );
+  }
 }

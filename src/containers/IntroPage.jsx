@@ -1,6 +1,7 @@
 /** Packages */
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 /** Components */
 import AvatarTalk from '../components/AvatarTalk';
 

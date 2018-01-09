@@ -16,7 +16,7 @@ export default class TechPage extends React.Component {
     const div = document.querySelector('.tech-page');
     const rect = div.getBoundingClientRect();
     window.addEventListener('scroll', () => {
-      if (window.pageYOffset >= rect.bottom / 2) {
+      if (window.pageYOffset >= rect.bottom) {
         this.props.handleBgColorChange('projectBg');
       };
     });

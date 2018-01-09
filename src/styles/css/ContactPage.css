@@ -1,0 +1,32 @@
+.contact-page {
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 100px; }
+
+.contact-content {
+  padding: 23px; }
+
+.social-icon {
+  text-align: center;
+  height: 70px;
+  max-height: 100px; }
+  .social-icon a {
+    text-decoration: none; }
+    .social-icon a i {
+      margin: 0 10px 0 10px;
+      font-size: 50px;
+      transition: all 250ms ease; }
+      .social-icon a i:hover {
+        font-size: 60px; }
+
+.email {
+  text-align: center; }
+  .email a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.5em; }
+    .email a i {
+      margin-right: 20px; }
+    .email a:hover {
+      font-size: 1.8em; }
