@@ -12,7 +12,9 @@
   }
   @media screen and (min-width:1023px){
     flex-basis: 300px;
-    margin:10px 5px 20px 5px;
+  }
+  @media screen and (min-width:1250px){
+    flex-basis: 330px;
   }
   @media screen and (min-width:1366px){
     flex-basis: 360px;

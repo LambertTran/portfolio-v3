@@ -11,8 +11,10 @@
       margin: 10px 5px 10px 5px; } }
   @media screen and (min-width: 1023px) {
     .project-item {
-      flex-basis: 300px;
-      margin: 10px 5px 20px 5px; } }
+      flex-basis: 300px; } }
+  @media screen and (min-width: 1250px) {
+    .project-item {
+      flex-basis: 330px; } }
   @media screen and (min-width: 1366px) {
     .project-item {
       flex-basis: 360px;

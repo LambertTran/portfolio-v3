@@ -1,14 +1,31 @@
 .tech-page {
   min-height: 50vh;
   width: 100%;
-  position: relative; }
-  .tech-page .tech-content {
-    padding: 23px; }
-  .tech-page .tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; }
-    .tech-page .tech-list i {
-      font-size: 50px;
-      margin: 10px; }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.tech-content {
+  padding: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; }
+  .tech-list i {
+    font-size: 70px;
+    margin: 10px; }
+  @media screen and (min-width: 767px) {
+    .tech-list {
+      width: 600px;
+      margin-top: 30px; } }
+  @media screen and (min-width: 1024px) {
+    .tech-list i {
+      font-size: 100px; } }

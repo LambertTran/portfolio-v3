@@ -8,15 +8,18 @@
 }
 
 .project-list{
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin-top: 30px;
+  max-width: 1350px;
   @media screen and (min-width:767px){
     flex-direction: row;
     flex-wrap: wrap;
   }
   @media screen and (min-width:1366px){
-    padding: 0 15px 0 15px;
+    padding: 20px;
   }
 }
