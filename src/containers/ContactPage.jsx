@@ -17,7 +17,7 @@ export default function ContactPage() {
   const hope = 'I hope talking to you soon!';
   const bye = 'You have a good day';
   return (
-    <div className="contact-page">
+    <div className="contact-page" id="contact-page">
       <div className="contact-content">
         <AvatarTalk talk={contact1} key="contact1" />
         <AvatarTalk talk={resume} key="resume" />
@@ -29,13 +29,13 @@ export default function ContactPage() {
           <a href="https://www.facebook.com/profile.php?id=100017117864078" target="_blank">
             <i className="devicon-facebook-plain colored" />
           </a>
-          <a href="" target="_blank">
+          <a href="https://twitter.com/LbTran648" target="_blank">
             <i className="devicon-twitter-plain colored" />
           </a>
-          <a href="" target="_blank">
+          <a href="https://www.linkedin.com/in/lamberttran/" target="_blank">
             <i className="fa fa-linkedin-square" aria-hidden="true" />
           </a>
-          <a href="#" target="_blank">
+          <a href="https://github.com/LambertTran" target="_blank">
             <i className="devicon-github-plain colored" />
           </a>
         </div>

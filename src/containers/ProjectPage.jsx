@@ -32,7 +32,7 @@ export default class ProjectPage extends React.Component {
     const talk1 = 'Finally! We are here. My proud projects!';
     const talk2 = 'Feel free to browse my works';
     return (
-      <div className="project-page">
+      <div className="project-page" id="project-page">
         <div className="project-container">
           <AvatarTalk key="project-talk-1" talk={talk1} />
           <AvatarTalk key="project-talk-2" talk={talk2} />

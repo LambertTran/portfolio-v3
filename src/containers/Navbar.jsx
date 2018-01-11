@@ -15,9 +15,32 @@ export default class Navbar extends React.Component {
       bgColor: 'transparent',
       isBoxShadow: false,
     };
+
+    this.handleBgChange = this.handleBgChange.bind(this);
   }
 
   componentDidMount() {
+    this.handleBgChange();
+    this.handScroll();
+  }
+  
+  handScroll() {
+    const navbar = document.querySelectorAll('#navbar-click');
+    navbar.forEach(function(el){
+      el.addEventListener('click', function() {
+        const gotoEl = this.getAttribute('name');
+        const pos = document.getElementById(gotoEl).getBoundingClientRect().top + window.scrollY - 70;
+        console.log(pos)
+        window.scrollTo({
+          top:pos,
+          left:0,
+          behavior: 'smooth',
+        })
+      });
+    })
+  }
+
+  handleBgChange(){
     const nav = document.querySelector('.navbar');
     const rectNav = nav.getBoundingClientRect();
     window.addEventListener('scroll', () => {
@@ -34,6 +57,7 @@ export default class Navbar extends React.Component {
       }
     });
   }
+
   render() {
     const { bgColor } = this.state;
     let border; 
@@ -42,20 +66,22 @@ export default class Navbar extends React.Component {
     } 
     return (
       <nav className={`navbar ${border}`} style={{ backgroundColor: bgColor }} >
-        <img src={logo} alt="logo"/>
-        <ul>
-          <li><a href="/tech-page">
+        <a href="/">
+          <img src={logo} alt="logo"/>
+        </a>
+        <ul id="navbar">
+          <li id='navbar-click' name="tech-page">
             <i className="fa fa-wrench" aria-hidden="true"></i>
             <span>Techs</span>
-          </a></li>
-          <li><a href="/project-page">
+          </li>
+          <li id='navbar-click' name="project-page">
             <i className="fa fa-folder-o" aria-hidden="true"></i>
             <span>Projects</span>
-          </a></li>
-          <li><a href="/contact-page">
+          </li>
+          <li id='navbar-click' name="contact-page">
             <i className="fa fa-phone" aria-hidden="true"></i>
             <span>Contact</span>
-          </a></li>
+          </li>
         </ul>
       </nav>
     )

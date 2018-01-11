@@ -27,7 +27,8 @@ export default class AvatarTalk extends React.Component {
         window.addEventListener('scroll', () => {
           const screen = (window.innerHeight * 2/3 )  + window.pageYOffset;
           const elPos = rect.bottom + window.scrollY;
-          if (elPos * 0.8 <= screen) {
+          console.log(elPos * 0.7)
+          if (elPos * 0.7 <= screen) {
             this.handleInView();
           }
         });
