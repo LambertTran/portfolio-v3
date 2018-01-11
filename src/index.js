@@ -29,8 +29,29 @@ class Wrapper extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ loading: false });
-    }, 1000);
+      this.handleAvatarAmination();
+  },1000);
+    
   }
+
+  handleAvatarAmination() {
+    const avatars = document.querySelectorAll('.avatar');
+    console.log(avatars)
+    window.addEventListener('scroll', function() {
+      const screen = (window.innerHeight * 0.95 )  + window.pageYOffset;
+      for (let i=0; i < avatars.length; ++i) {
+        const rect = avatars[i].getBoundingClientRect();
+        const elPos = rect.bottom + window.scrollY;
+        if (elPos <= screen) {
+          avatars[i].style.opacity ='1';
+        }
+        if (elPos < window.pageYOffset + 300){
+          avatars[i].style.opacity ='0';
+        }         
+      }
+    });
+  }
+
 
   // Handle change background color
   handleBgColorChange(changeBg) {

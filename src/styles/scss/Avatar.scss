@@ -10,6 +10,8 @@
   width: 100%;
   flex-direction: row;
   justify-content: flex-start;
+  opacity:0;
+  transition: opacity 1s ease-in;
   margin-top:20px;
   margin-bottom: 20px;
   img{
@@ -37,13 +39,11 @@
   }
 }
 
-.slideUp-appear {
-  opacity: 0.01;
-  bottom: -100px;
-}
+  .slideUp-appear {
+    opacity: 0;
+  }
 
-.slideUp-appear.slideUp-appear-active {
-  opacity: 1;
-  bottom:0px;
-  transition: 1s ease-in;
-}
+  .slideUp-appear.slideUp-appear-active {
+    opacity: 1;
+    transition: 1s ease-in;
+  }
