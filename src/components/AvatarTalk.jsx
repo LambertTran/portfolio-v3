@@ -21,24 +21,6 @@ export default class AvatarTalk extends React.Component {
   componentDidMount() {
     if (this.props.static) {
       this.handleInView();
-    } else {
-      // window.addEventListener('scroll', () => {
-      //   const rect = this.avatarElement.getBoundingClientRect();
-      //   window.addEventListener('scroll', () => {
-      //     const screen = (window.innerHeight * 2/3 )  + window.pageYOffset;
-      //     const elPos = rect.bottom + ;
-      //     console.log(elPos * 0.7)
-      //     if (elPos * 0.7 <= screen) {
-      //       this.handleInView();
-      //     }
-      //   });
-      // })
-      // const avatars = document.querySelectorAll('.avatar');
-      // window.addEventListener('scroll', () => {
-      //   avatars.forEach((avatar) => {
-      //     console.log(this);
-      //   })
-      // })
     }
   }
 

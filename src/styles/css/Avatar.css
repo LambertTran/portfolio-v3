@@ -10,7 +10,7 @@
   flex-direction: row;
   justify-content: flex-start;
   opacity: 0;
-  transition: opacity 1s ease-in;
+  transition: opacity 0.75s ease-in;
   margin-top: 20px;
   margin-bottom: 20px; }
   .avatar img {
@@ -24,7 +24,7 @@
     box-shadow: 0 3px 5px black;
     max-width: 70%;
     margin-left: 5px;
-    padding: 5px; }
+    padding: 10px; }
     @media screen and (min-width: 767px) {
       .avatar p {
         font-size: 1.6em; } }

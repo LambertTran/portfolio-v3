@@ -10,12 +10,13 @@ import '../styles/css/ContactPage.css';
 
 /** Class */
 export default function ContactPage() {
-  const contact1 = 'What do you think about my skill set?';
-  const contact2 = 'You can always reach me in social media';
-  const contact3 = 'Or send me an email';
-  const resume = 'Btw, you can also check out my resume';
-  const hope = 'I hope talking to you soon!';
-  const bye = 'You have a good day';
+  const contact1 = 'What do you think about my projects?';
+  const contact2 = 'If you have any question or want to have a conversation with me, '+
+                   'feel free to reach on one of these social media';
+  const contact3 = 'Or send me an email at';
+  const resume = 'Oh! Btw, you can also check out my resume using link below';
+  const hope = 'I hope to talk to you soon!';
+  const bye = 'Have a good day :D';
   return (
     <div className="contact-page" id="contact-page">
       <div className="contact-content">

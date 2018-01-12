@@ -28,9 +28,9 @@ export default class IntroPage extends React.Component {
   }
 
   render() {
-    const intro = 'My name is Lambert Tran.' + "\n" +
-                  'I\'m an inspired full-stack developer';
-    const talk = 'Let me show you my story';
+    const intro = 'My name is Lambert Tran.' +
+                  'I\'m an inspired full-stack web developer.';
+    const talk = 'Let me take you through my portfolio.';
     return (
       <div className="intro-page">
         <div className="content">

@@ -29,8 +29,8 @@ export default class ProjectPage extends React.Component {
     });
   }
   render() {
-    const talk1 = 'Finally! We are here. My proud projects!';
-    const talk2 = 'Feel free to browse my works';
+    const talk1 = 'Next is my representative projects.';
+    const talk2 = 'Feel free to browse and play around.';
     return (
       <div className="project-page" id="project-page">
         <div className="project-container">

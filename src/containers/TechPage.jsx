@@ -22,7 +22,7 @@ export default class TechPage extends React.Component {
     });
   }
   render() {
-    const talk = 'The list below is the technologies I used';
+    const talk = 'The following list is the technologies that I use';
     return (
       <div id="tech-page" className="tech-page">
         <div className="tech-content">

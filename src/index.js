@@ -45,7 +45,7 @@ class Wrapper extends React.Component {
         if (elPos <= screen) {
           avatars[i].style.opacity ='1';
         }
-        if (elPos < window.pageYOffset + 300){
+        if (elPos < window.pageYOffset + 200 || elPos > screen ){
           avatars[i].style.opacity ='0';
         }         
       }
