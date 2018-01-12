@@ -8,7 +8,10 @@ project.auto27 = {
   image: auto27,
   detail: 'This is car dealer showcase',
   techs: ['ReactJs', 'Redux', 'MongoDb', 'ExpressJs', 'Nodejs', 'AWS'],
-  github: 'https://github.com/LambertTran/car-dealer-website',
+  github: [
+    {client:'https://github.com/LambertTran/car-dealer-website'},
+    {server:'https://github.com/LambertTran/car-dealer-website'}
+  ],
   web: 'https://auto27.us/',
 };
 project.todoApp = {
