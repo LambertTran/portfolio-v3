@@ -36,7 +36,6 @@ class Wrapper extends React.Component {
 
   handleAvatarAmination() {
     const avatars = document.querySelectorAll('.avatar');
-    console.log(avatars)
     window.addEventListener('scroll', function() {
       const screen = (window.innerHeight * 0.95 )  + window.pageYOffset;
       for (let i=0; i < avatars.length; ++i) {

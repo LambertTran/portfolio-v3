@@ -9,10 +9,13 @@ project.auto27 = {
   detail: 'This is car dealer showcase',
   techs: ['ReactJs', 'Redux', 'MongoDb', 'ExpressJs', 'Nodejs', 'AWS'],
   github: [
-    {client:'https://github.com/LambertTran/car-dealer-website'},
-    {server:'https://github.com/LambertTran/car-dealer-website'}
+    { fontEnd: 'https://github.com/LambertTran/car-dealer-website' },
+    { backEnd: 'https://github.com/LambertTran/car-dealer-website' },
   ],
-  web: 'https://auto27.us/',
+  web: [
+    { frontEnd: 'https://auto27.us/' },
+    { backEnd: 'https://ucd-hyperloop.herokuapp.com/login' },
+  ],
 };
 project.todoApp = {
   name: 'Full-stack Todo App',
@@ -20,10 +23,12 @@ project.todoApp = {
   detail: 'This is car dealer showcase',
   techs: ['ReactJs', 'Redux', 'MongoDb', 'ExpressJs', 'Nodejs', 'AWS'],
   github: [
-    'https://github.com/LambertTran/todo-app-react-redux',
-    'https://github.com/LambertTran/node-server-todoApp'
+    { fontEnd: 'https://github.com/LambertTran/todo-app-react-redux' },
+    { backEnd: 'https://github.com/LambertTran/node-server-todoApp' },
   ],
-  web: 'http://todo-react-redux.s3-website-us-west-1.amazonaws.com/',
+  web: [
+    { frontEnd: 'http://todo-react-redux.s3-website-us-west-1.amazonaws.com/' },
+  ],
 };
 project.markdown = {
   name: 'Markdown Preview',
@@ -31,10 +36,9 @@ project.markdown = {
   detail: 'This is car dealer showcase',
   techs: ['ReactJs'],
   github: [
-    'https://github.com/LambertTran/todo-app-react-redux',
-    'https://github.com/LambertTran/node-server-todoApp'
+    'https://ucd-hyperloop.herokuapp.com/login',
   ],
-  web: 'http://todo-react-redux.s3-website-us-west-1.amazonaws.com/',
+  web: ['http://todo-react-redux.s3-website-us-west-1.amazonaws.com/'],
 };
 
 export default project;

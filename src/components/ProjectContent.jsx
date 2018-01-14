@@ -9,13 +9,31 @@ import avatar from '../images/avatar.png';
 import '../styles/css/ProjectContent.css';
 
 export default function ProjectContent(projectData) {
-  const {data} = projectData;
-  
+  const { data } = projectData;
   // render button for source code
-  function renderSourceCode(link){
-    return (
-      <a className="linkBtn" href={link} target="_blank" >Source code</a>
-    )
+  function renderLinkBtn(links) {
+    if (typeof links[0] !== "object") {
+      return (
+        <a className="linkBtn" href={links} target="_blank" >Link</a>
+      );
+    }
+    return links.map((link) => {
+      const linkName = Object.keys(link);
+      const display = convertToDisplay(linkName[0]);
+      return (
+        <a className="linkBtn" key={linkName} href={link.linkName}>{display}</a>
+      );
+    })
+  }
+
+  function convertToDisplay(name) {
+    for (let i = 0 ; i < name.length; ++i ) {
+      if (name[i] === name[i].toUpperCase()) {
+        let display = name.replace(name[i],` ${name[i]}`);
+        display = display.replace(display[0], display[0].toUpperCase());
+        return display;
+      }
+    }
   }
 
   // render techs used in the project
@@ -35,8 +53,10 @@ export default function ProjectContent(projectData) {
           {renderTechs(data.techs)}
         </ul>
       <div>
-        {renderSourceCode(data.github)}
-        {renderSourceCode(data.web)}
+        <h2>Sourcce codes:</h2>
+        {renderLinkBtn(data.github)}
+        <h2>Websites: </h2>
+        {renderLinkBtn(data.web)}
       </div>
 
       </div>
