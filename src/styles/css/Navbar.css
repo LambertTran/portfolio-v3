@@ -8,17 +8,28 @@
   transition: background-color 1s ease; }
   .navbar a {
     align-self: center;
-    height: 45px;
-    margin-left: 30px; }
+    height: 55px;
+    width: 55px;
+    margin-left: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: relative; }
     .navbar a img {
-      height: 45px;
-      width: 45px; }
-      @media screen and (min-width: 767px) {
-        .navbar a img {
-          padding-left: 15px; } }
-      @media screen and (min-width: 1300px) {
-        .navbar a img {
-          padding-left: 30px; } }
+      height: 40px;
+      width: 40px;
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+    @media screen and (min-width: 767px) {
+      .navbar a {
+        margin-left: 35px; } }
+    @media screen and (min-width: 1300px) {
+      .navbar a {
+        margin-left: 45px; } }
   .navbar ul {
     list-style: none;
     display: flex;
