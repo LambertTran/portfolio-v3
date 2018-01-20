@@ -1,9 +1,5 @@
 /** Packages */
 import React from 'react';
-import Modal from 'react-modal';
-
-/** Images */
-import avatar from '../images/avatar.png';
 
 /** Styles */
 import '../styles/css/ProjectContent.css';
@@ -12,7 +8,7 @@ export default function ProjectContent(projectData) {
   const { data } = projectData;
   // render button for source code
   function renderLinkBtn(links) {
-    if (typeof links[0] !== "object") {
+    if (typeof links[0] !== 'object') {
       return (
         <a className="linkBtn" href={links} target="_blank" >Link</a>
       );
@@ -21,7 +17,7 @@ export default function ProjectContent(projectData) {
       const linkName = Object.keys(link);
       const display = convertToDisplay(linkName[0]);
       return (
-        <a className="linkBtn" key={linkName} href={link.linkName}>{display}</a>
+        <a className="linkBtn" target="_blank" key={linkName} href={link[linkName[0]]}>{display}</a>
       );
     })
   }

@@ -29,7 +29,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
-  .project-bg h1 {
+  .project-bg h2 {
     height: 70px;
     line-height: 70px;
     border-radius: 0 0 20px 20px;
@@ -39,7 +39,7 @@
     margin: 0;
     border: none;
     transition: opacity 0.3s ease-in; }
-  .project-bg:hover h1 {
+  .project-bg:hover h2 {
     opacity: 0;
     transition: opacity 0.3s ease-out; }
 

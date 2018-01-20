@@ -40,6 +40,8 @@ export default class ProjectPage extends React.Component {
             <Project data={projectData.auto27} />
             <Project data={projectData.todoApp} />
             <Project data={projectData.markdown} />
+            <Project data={projectData.youtubeApp} />
+            <Project data={projectData.wikiSearch} />
           </div>
         </div>
       </div>

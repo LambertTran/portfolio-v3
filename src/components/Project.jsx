@@ -74,7 +74,7 @@ export default class Project extends React.Component {
           onClick={this.handleOpenModal}
           style={{backgroundImage: `url(${data.image})`}}
           >
-          <h1 className="project-name">{data.name}</h1>
+          <h2 className="project-name">{data.name}</h2>
         </div>
         <Modal
           className="animated fadeInDown"
