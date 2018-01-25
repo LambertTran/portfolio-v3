@@ -42,16 +42,16 @@ export default function ProjectContent(projectData) {
     <div className="project-content">
       <img src={data.image} alt="project-img"/>
       <div className="project-detail">
-        <h1>{data.name}</h1>
+        <h4 className="header color-title">{data.name}</h4>
         <p>{data.detail}</p>
-        <p>Techs used:</p>
+        <h4 className="header header-margin">Techs used:</h4>
         <ul>
           {renderTechs(data.techs)}
         </ul>
       <div>
-        <h2>Sourcce codes:</h2>
+        <h4 className="header header-margin">Sourcce codes:</h4>
         {renderLinkBtn(data.github)}
-        <h2>Websites: </h2>
+        <h4 className="header header-margin">Websites: </h4>
         {renderLinkBtn(data.web)}
       </div>
 

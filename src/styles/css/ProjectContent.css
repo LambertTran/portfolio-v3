@@ -16,10 +16,20 @@
 .project-detail {
   flex-basis: 400px;
   padding: 25px 25px 60px 25px; }
-  .project-detail h1 {
-    text-align: center; }
   .project-detail p {
     font-size: 1.2em; }
+
+.header {
+  font-size: 1.4em;
+  font-weight: 500; }
+
+.header-margin {
+  margin: 0;
+  line-height: 1.1; }
+
+.color-title {
+  text-align: center;
+  color: #703dc1; }
 
 .linkBtn {
   outline: none;
@@ -33,7 +43,7 @@
   border: 1px solid #30BCED;
   letter-spacing: 1px;
   text-decoration: none;
-  margin: 10px;
+  margin: 10px 5px 20px 5px;
   cursor: pointer;
   font-weight: bold;
   transition: all 250ms ease-in;
