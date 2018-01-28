@@ -1,13 +1,14 @@
 import auto27 from '../images/auto27.png';
 import todoApp from '../images/todo-app.png';
 import markdown from '../images/markdown.png';
+import youtube from '../images/youtube-player.png';
 
 const project = {};
 project.auto27 = {
   name: 'Auto27',
   image: auto27,
   detail: 'A car dealer website, where the admin user can update their car inventory to put it on sale.',
-  techs: ['ReactJs', 'Redux', 'MongoDb', 'ExpressJs', 'Nodejs', 'AWS'],
+  techs: ['ReactJs', 'Redux', 'MongoDb', 'ExpressJs', 'Nodejs','Sass', 'AWS'],
   github: [
     { fontEnd: 'https://github.com/LambertTran/reactjs-auto27-web' },
     { backEnd: 'https://github.com/LambertTran/node-server-auto27' },
@@ -44,7 +45,7 @@ project.markdown = {
 };
 project.youtubeApp = {
   name: 'Youtube Player',
-  image: markdown,
+  image: youtube,
   detail: 'Simple youtube player that render videos from youtube API',
   techs: ['ReactJs'],
   github: [

@@ -18,10 +18,13 @@
   padding: 25px 25px 60px 25px; }
   .project-detail p {
     font-size: 1.2em; }
+  .project-detail ul {
+    margin: 10px 0 20px 0px; }
 
 .header {
-  font-size: 1.4em;
-  font-weight: 500; }
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #703dc1; }
 
 .header-margin {
   margin: 0;
@@ -29,7 +32,7 @@
 
 .color-title {
   text-align: center;
-  color: #703dc1; }
+  font-size: 1.6em; }
 
 .linkBtn {
   outline: none;
