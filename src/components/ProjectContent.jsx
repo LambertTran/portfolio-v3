@@ -38,6 +38,16 @@ export default function ProjectContent(projectData) {
       <li key={tech}>{tech}</li>
     )
   }
+
+  let source = 'Source code';
+  let web = 'Website';
+  if (data.github.length > 1) {
+    source = 'Source codes';
+  }
+  if (data.web.length > 1) {
+    web = 'Websites';
+  }
+
   return (
     <div className="project-content">
       <img src={data.image} alt="project-img"/>
@@ -49,9 +59,9 @@ export default function ProjectContent(projectData) {
           {renderTechs(data.techs)}
         </ul>
       <div>
-        <h4 className="header header-margin">Sourcce codes:</h4>
+        <h4 className="header header-margin"> {source} </h4>
         {renderLinkBtn(data.github)}
-        <h4 className="header header-margin">Websites: </h4>
+        <h4 className="header header-margin"> {web} </h4>
         {renderLinkBtn(data.web)}
       </div>
 
