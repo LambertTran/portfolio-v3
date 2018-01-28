@@ -2,6 +2,7 @@ import auto27 from '../images/auto27.png';
 import todoApp from '../images/todo-app.png';
 import markdown from '../images/markdown.png';
 import youtube from '../images/youtube-player.png';
+import wiki from '../images/wiki-searcher.png';
 
 const project = {};
 project.auto27 = {
@@ -57,14 +58,14 @@ project.youtubeApp = {
 };
 project.wikiSearch = {
   name: 'Wikipeadia Search App',
-  image: markdown,
+  image: wiki,
   detail: 'Single page app that searchs user keywords in Wikipeadia database',
   techs: ['VanillaJS'],
   github: [
-    { sourceCode: 'https://github.com/LambertTran/youtube-player-reactjs' },
+    { sourceCode: 'https://github.com/LambertTran/wiki-searcher' },
   ],
   web: [
-    { webLink: 'https://github.com/LambertTran/portfolio-v1/tree/master/projects/wikiSearch' },
+    { webLink: 'http://wiki-searcher.s3-website-us-west-1.amazonaws.com/' },
   ],
 };
 
