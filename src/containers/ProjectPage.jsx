@@ -40,6 +40,7 @@ export default class ProjectPage extends React.Component {
           <AvatarTalk key="project-talk-1" talk={talk1} />
           <AvatarTalk key="project-talk-2" talk={talk2} />
           <div className="project-list">
+            <Project data={projectData.UCDhyperloop} />
             <Project data={projectData.auto27} />
             <Project data={projectData.todoApp} />
             <Project data={projectData.markdown} />

@@ -5,10 +5,23 @@ import youtube from '../images/youtube-player.png';
 import wiki from '../images/wiki-searcher.png';
 
 const project = {};
+project.UCDhyperloop = {
+  name: 'UC.Davis hyperloop',
+  image: auto27,
+  detail: 'A car dealer website with an CMS that allows an admin user to manage their car inventory and customer images.',
+  techs: ['Handlebars', 'MySQL', 'ExpressJs', 'Nodejs', 'Sass', 'AWS'],
+  github: [
+    { sourceCode: 'https://github.com/LambertTran/UCD-hyperloop' },
+  ],
+  web: [
+    { frontEnd: 'https://ucd-hyperloop.herokuapp.com/' },
+    { backEnd: 'https://ucd-hyperloop.herokuapp.com/login' },
+  ],
+};
 project.auto27 = {
   name: 'Auto27',
   image: auto27,
-  detail: 'A car dealer website, where the admin user can update their car inventory to put it on sale.',
+  detail: 'A car dealer website with an CMS that allows an admin user to manage their car inventory and customer images.',
   techs: ['ReactJs', 'Redux', 'MongoDb', 'ExpressJs', 'Nodejs','Sass', 'AWS'],
   github: [
     { fontEnd: 'https://github.com/LambertTran/reactjs-auto27-web' },
@@ -22,7 +35,7 @@ project.auto27 = {
 project.todoApp = {
   name: 'Full-stack Todo App',
   image: todoApp,
-  detail: 'A simple Todo-app. Users create their own account with the todo lists linked only to their account',
+  detail: 'A simple Todo-app where users can create their own account and todo lists that are linked only to their identity',
   techs: ['ReactJs', 'Redux', 'MongoDb', 'ExpressJs', 'Nodejs'],
   github: [
     { fontEnd: 'https://github.com/LambertTran/todo-app-react-redux' },
@@ -35,7 +48,7 @@ project.todoApp = {
 project.markdown = {
   name: 'Markdown Preview',
   image: markdown,
-  detail: 'Simple App converts markdown formart to regular text.',
+  detail: 'Simple app converts markdown formart to regular text in real time.',
   techs: ['ReactJs'],
   github: [
     { sourceCode: 'https://github.com/LambertTran/markdown-preview' },
@@ -47,7 +60,7 @@ project.markdown = {
 project.youtubeApp = {
   name: 'Youtube Player',
   image: youtube,
-  detail: 'Simple youtube player that render videos from youtube API',
+  detail: 'An youtube player that renders and plays videos using youtube API',
   techs: ['ReactJs'],
   github: [
     { sourceCode: 'https://github.com/LambertTran/youtube-player-reactjs' },
@@ -59,7 +72,7 @@ project.youtubeApp = {
 project.wikiSearch = {
   name: 'Wikipeadia Search App',
   image: wiki,
-  detail: 'Single page app that searchs user keywords in Wikipeadia database',
+  detail: 'A single page app displays Wikipeadia searched result bases on user\' inputs',
   techs: ['VanillaJS'],
   github: [
     { sourceCode: 'https://github.com/LambertTran/wiki-searcher' },

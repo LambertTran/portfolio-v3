@@ -17,7 +17,11 @@
   flex-basis: 400px;
   padding: 25px 25px 60px 25px; }
   .project-detail p {
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    margin: 30px 10px 40px 10px; }
+    @media screen and (min-width: 1023px) {
+      .project-detail p {
+        margin: 20px 0px 40px 0px; } }
   .project-detail ul {
     margin: 10px 0 20px 0px; }
 
