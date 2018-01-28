@@ -3,7 +3,6 @@
   position: relative;
   min-height: 70vh;
   width: 100%;
-  font-family: "Source Sans Pro", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center; }

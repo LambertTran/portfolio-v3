@@ -1,11 +1,9 @@
 @import 'Font-Color.scss';
-
 .intro-page{
   position: relative;
   // background: linear-gradient(to right bottom, $bg1, $bg2); 
   min-height: 70vh;
   width: 100%;
-  font-family: $text-font;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -47,37 +47,47 @@ export default class Project extends React.Component {
     this.state = {
       isInView : false, 
       isModalOpen: false,
+      animation: '',
     };
 
     this.handleCloseModal = this.handleCloseModal.bind(this);
     this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   componentWillMount() {
     Modal.setAppElement('body');
   }
-
-  handleCloseModal() {
-    this.setState({ isModalOpen: false });
-  }
   handleOpenModal() {
-    this.setState({ isModalOpen: true });
+    this.setState({ 
+      isModalOpen: true,
+      animation: 'fadeInDown',
+    });
+  }
+  handleCloseModal() {
+    this.setState({ animation: 'fadeOutDown' }, this.closeModal);
+  }
+  closeModal() {
+    setTimeout(() => {
+      this.setState({ isModalOpen: false }); 
+    }, 300);
   }
 
 
   render() {
     const { data } = this.props;
+    const modalAnimation = `animated ${this.state.animation}`;
     return (
       <div className="project-item">
         <div 
           className="project-bg" 
           onClick={this.handleOpenModal}
           style={{backgroundImage: `url(${data.image})`}}
-          >
+        >
           <h2 className="project-name">{data.name}</h2>
         </div>
         <Modal
-          className="animated fadeInDown"
+          className={modalAnimation}
           onRequestClose={this.handleCloseModal}
           isOpen={this.state.isModalOpen}
           style={modalStyle}

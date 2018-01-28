@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 .portfolio {
   display: flex;
   flex-direction: column;
@@ -7,6 +8,7 @@
 .wrapper {
   align-self: center;
   max-width: 1600px;
+  font-family: "Source Sans Pro", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

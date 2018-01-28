@@ -22,12 +22,15 @@ export default class ProjectPage extends React.Component {
     const div = document.querySelector('.project-page');
     const rect = div.getBoundingClientRect();
     window.addEventListener('scroll', () => {
-      const screen = window.innerHeight  + window.pageYOffset;
+      const screen = window.innerHeight + window.pageYOffset;
+      
       if (screen >= rect.bottom * 1.2) {
         this.props.handleBgColorChange('introBg');
       };
     });
   }
+
+
   render() {
     const talk1 = 'Next is my representative projects.';
     const talk2 = 'Feel free to browse and play around.';
