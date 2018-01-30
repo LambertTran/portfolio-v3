@@ -39,6 +39,15 @@ export default function ProjectContent(projectData) {
     )
   }
 
+  function renderStatus(status){
+    if (!status) {
+      return; 
+    }
+    return (
+      <h4 className="header">Status: <span>{status} </span></h4>
+    )
+  }
+  
   let source = 'Source code';
   let web = 'Website';
   if (data.github.length > 1) {
@@ -52,8 +61,9 @@ export default function ProjectContent(projectData) {
     <div className="project-content">
       <img src={data.image} alt="project-img"/>
       <div className="project-detail">
-        <h4 className="header color-title">{data.name}</h4>
+        <h4 className="header title">{data.name}</h4>
         <p>{data.detail}</p>
+        {renderStatus(data.status)}
         <h4 className="header header-margin">Techs used:</h4>
         <ul>
           {renderTechs(data.techs)}

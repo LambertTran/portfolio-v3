@@ -29,12 +29,15 @@
   font-size: 1.3em;
   font-weight: 500;
   color: #703dc1; }
+  .header span {
+    color: black;
+    font-size: 0.9em; }
 
 .header-margin {
   margin: 0;
   line-height: 1.1; }
 
-.color-title {
+.title {
   text-align: center;
   font-size: 1.6em; }
 

@@ -1,7 +1,6 @@
 /** Packages */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
 
 /** Components */
 import Navbar from './containers/Navbar';
@@ -30,6 +29,7 @@ class Wrapper extends React.Component {
     setTimeout(() => {
       this.setState({ loading: false });
       this.handleAvatarAmination();
+      console.log("I could have minified this, but I knew you were coming. Welcome, and please peek about!")
   },1000);
     
   }
@@ -106,4 +106,3 @@ class Wrapper extends React.Component {
 }
 
 ReactDOM.render(<Wrapper />, document.getElementById('root'));
-registerServiceWorker();

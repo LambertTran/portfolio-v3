@@ -1,3 +1,4 @@
+import hyperloop from '../images/hyperloop.png';
 import auto27 from '../images/auto27.png';
 import todoApp from '../images/todo-app.png';
 import markdown from '../images/markdown.png';
@@ -7,8 +8,9 @@ import wiki from '../images/wiki-searcher.png';
 const project = {};
 project.UCDhyperloop = {
   name: 'UC.Davis hyperloop',
-  image: auto27,
-  detail: 'A car dealer website with an CMS that allows an admin user to manage their car inventory and customer images.',
+  image: hyperloop,
+  status: 'In progress',
+  detail: 'Hyperloop club website at UC.Davis',
   techs: ['Handlebars', 'MySQL', 'ExpressJs', 'Nodejs', 'Sass', 'AWS'],
   github: [
     { sourceCode: 'https://github.com/LambertTran/UCD-hyperloop' },
