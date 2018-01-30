@@ -41,4 +41,32 @@
   }
 }
 
+.resume{
+  text-align: center;
+}
+
+.resume-btn{
+  outline: none;
+  display: inline-block;
+  font-size: 1.6em;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding: 3px 12px 3px 12px;
+  width: 120px;
+  border-radius: 15px;
+  background-color: transparent;
+  border:1.5px solid black;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin: 10px 5px 20px 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 250ms ease-in;
+  color:#303036;
+  &:hover{
+    background-color: #30BCED;
+    color:#FFFAFF;
+  }
+}
 

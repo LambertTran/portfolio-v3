@@ -8,6 +8,9 @@ import AvatarTalk from '../components/AvatarTalk';
 /** Styles */
 import '../styles/css/ContactPage.css';
 
+/** Resume */
+import resumePdf from '../documents/Resume.pdf';
+
 /** Class */
 export default function ContactPage() {
   const contact1 = 'What do you think about my projects?';
@@ -23,7 +26,7 @@ export default function ContactPage() {
         <AvatarTalk talk={contact1} key="contact1" />
         <AvatarTalk talk={resume} key="resume" />
         <div className="resume">
-
+          <a className="resume-btn" href={resumePdf} target="_blank">Resume</a>
         </div>
         <AvatarTalk talk={contact2} key="contact2" />
         <div className="social-icon">
